@@ -1570,7 +1570,7 @@ th {
 
 @font-face {
   font-family: 'FuturicaLtThin';
-  src: url(/326d7d23311b5c80791143a59b53c2b9.ttf) format("truetype"), url(/d64f16a9e6dadc83f0c19f5ca51a4f9e.woff) format("woff");
+  src: url(326d7d23311b5c80791143a59b53c2b9.ttf) format("truetype"), url(d64f16a9e6dadc83f0c19f5ca51a4f9e.woff) format("woff");
 }
 
 html {
@@ -1641,7 +1641,7 @@ body {
 }
 
 .container {
-  background-image: url(cfe926667ba14f6a6425164b2318a000.png);
+  background-image: url(/cfe926667ba14f6a6425164b2318a000.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
