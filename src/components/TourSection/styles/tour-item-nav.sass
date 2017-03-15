@@ -1,0 +1,94 @@
+.tour-nav
+  display: flex
+  align-items: center
+  &--arow
+    height: 5.7rem
+    width: 5.7rem
+    border-radius: 50%
+    border: none
+    outline: none
+    background-color: #f2e4cf
+    font-size: 2rem
+    color: #aea599
+
+  &--list-item
+    position: relative
+    margin: 0 1rem
+    display: flex
+    list-style: none
+    padding: 0
+
+  &--item
+    border: 1px solid rgba(0,0,0,.2)
+    position: relative
+    &:hover
+      .tour-nav--btn-over
+        transform: translate(-50%, 0) scaleY(1) 
+    
+  &--btn
+    position: relative
+    display: table-cell
+    vertical-align: bottom
+    padding-bottom: 1.6rem
+    height: 5.7rem
+    width: 5.7rem
+    font-size: 1.01rem
+    text-align: center
+    text-decoration: none
+    color: #e9dfce
+    transition: all ease-out .4s
+    box-sizing: border-box
+    &:before
+      content: '\203A'
+      position: absolute
+      width: 10px
+      height: 10px
+      bottom: 28%
+      left: 30%
+      font-size: 1.2rem
+      color: rgba(253,241,223,.5)
+
+    &:hover,
+    &__active
+      background-color: #FFF
+      color: #292928
+
+  &--btn-over
+    position: absolute
+    display: block
+    padding: 2.9rem 2rem 1.7rem 2.5rem
+    width: 16rem
+    top: -8rem
+    left: 50%
+    background-color: rgba(0,0,0,.5)
+    color: #f1e2ca
+    font-size: 1.01rem
+    transform: translate(-50%,50%) scaleY(0) 
+    transition: all ease-out .2s
+
+    &:before
+      content: '\203A'
+      position: absolute
+      width: 10px
+      height: 10px
+      bottom: 33%
+      left: 10%
+      font-size: 1.2rem
+      color: rgba(253,241,223,.5)
+
+    &:after
+      content: ''
+      position: absolute
+      box-sizing: border-box
+      width: 8px
+      height: 5px
+      bottom: -7px
+      border-top: 7px solid rgba(0,0,0,.5)
+      border-left: 4px solid transparent
+      border-right: 4px solid transparent
+      left: 50%
+      transform: translateX(-50%)
+      color: rgba(0,0,0,.5)
+
+
+

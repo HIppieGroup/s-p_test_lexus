@@ -1,0 +1,106 @@
+.color-nav
+  flex: 1 1 30%
+  display: flex
+  flex-flow: row nowrap
+  list-style: none
+  justify-content: space-between
+  align-items: flex-start
+  padding: 0
+  margin: 0
+  &--item
+    position: relative
+    &:hover
+      .color-nav--btn-over
+        transform: translate(-50%, 0) scaleY(1)
+
+  &--btn
+    position: relative
+    display: block
+    box-sizing: content-box
+    height: 2.5rem
+    width: 2.5rem
+    border-radius: 50%
+    cursor: pointer
+    background-image: url("../../../image/color.png")
+    background-repeat: no-repeat
+    text-decoration: none
+    background-size: 1600% 100%
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      height: 2.3rem
+      width: 2.3rem
+      border-radius: 50%
+      border: 1rem solid #555756
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      opacity: 0
+      transition: opacity ease-out .2s
+    &:hover,
+    &__active
+      &:before
+        opacity: .8 
+
+    &-over
+      position: absolute
+      display: block
+      padding: 2.9rem 2rem 1.7rem 2.5rem
+      width: 16rem
+      top: 5rem
+      left: 50%
+      background-color: rgba(0,0,0,.5)
+      color: #f1e2ca
+      word-wrap: normal
+      font-size: 1.01rem
+      transform: translate(-50%,-50%) scaleY(0) 
+      transition: all ease-out .2s
+
+      &:before
+        content: '\203A'
+        position: absolute
+        width: 10px
+        height: 10px
+        bottom: 33%
+        left: 10%
+        font-size: 1.2rem
+        color: rgba(253,241,223,.5)
+
+      &:after
+        content: ''
+        position: absolute
+        box-sizing: border-box
+        width: 8px
+        height: 5px
+        top: -7px
+        border-bottom: 7px solid rgba(0,0,0,.5)
+        border-left: 4px solid transparent
+        border-right: 4px solid transparent
+        left: 50%
+        transform: translateX(-50%)
+        color: rgba(0,0,0,.5)
+
+
+    
+
+  &__color-1
+    background-position: 0 0
+  &__color-2
+    background-position: 11% 0
+  &__color-3
+    background-position: 22% 0
+  &__color-4
+    background-position: 33% 0
+  &__color-5
+    background-position: 44.5% 0
+  &__color-6
+    background-position: 55.6% 0
+  &__color-7
+    background-position: 67% 0
+  &__color-8
+    background-position: 77.8% 0
+  &__color-9
+    background-position: 89% 0
+  &__color-10
+    background-position: 100% 0

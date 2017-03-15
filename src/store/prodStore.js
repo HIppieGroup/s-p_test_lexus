@@ -5,5 +5,7 @@ import { loadState} from './localStorage';
 const persistedState = loadState();
 
 export default function configureStore() {
-  return createStore(reducers, persistedState);
+  return createStore(reducers);
 }
+
+//, persistedState

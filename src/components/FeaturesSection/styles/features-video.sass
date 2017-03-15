@@ -1,0 +1,79 @@
+.feature-video
+  position: absolute
+  z-index: -1
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  background-color: #000
+  width: 64.6rem
+  height: 39.6rem
+  border: 2px solid #fff
+  opacity: 0
+  transition: ease-out .2s all
+  
+  &__open
+    opacity: 1
+    z-index: 15
+    transition-delay: .6s
+  &--video
+    flex: 8 1
+  &--nav
+    flex: 1 8 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 0
+    padding: 0
+    list-style: none
+    background-color: #FFF
+  &--arow
+    display: block
+    height: 1.4rem
+    width: 6rem
+    text-decoration: none
+    background-repeat: no-repeat
+    opacity: .3
+    transition: opacity ease-out .4s 
+    &:hover
+      opacity: .8
+    &__pre
+      background-image: url("../../../image/features/arow.svg")
+      background-size: 9rem 1.4rem
+      background-position: 0 0
+    &__next
+      background-image: url("../../../image/features/arow.svg")
+      background-size: 9rem 1.4rem
+      background-position: -3rem 0
+  
+  &--btn-close
+    position: absolute
+    display: block
+    top: -2rem
+    right: -2.7rem
+    width: 3rem
+    height: 3rem
+    background: #bcbcbc
+    background: linear-gradient(135deg, #bcbcbc 1%,#7e7e7e 47%,#141414 62%,#141414 100%)
+    border-radius: 50%
+    border: 3px solid #fff
+    transform: rotateZ(45deg)
+    text-decoration: none
+    font-size: 2rem
+    color: #fff
+    padding-top: .1rem
+
+
+
+
+
+
+
+
+
+
+
+
+

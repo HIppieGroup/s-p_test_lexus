@@ -1,41 +1,37 @@
 import React, { Component } from 'react';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+import ItemNav from './ItemNav';
+import SubItem from './turSubItem';
+
+import './styles/tour-section.sass'
 
 class TourSection extends Component {
   render() {
     return (
-      <div>
-
-        <div>
-          <h3>комфорт</h3>
-          <p></p>
-          <ul>
-            <li> + </li>
-            <li> + </li>
-            <li> + </li>
-            <li> + </li>
-          </ul>
+      <div className={`tour-section ${this.enabledClass()}`}>
+        <div className="tour-section--content tour-section--content__left">
+          <h2 className="tour-section--header">Тур</h2>
+          <ItemNav data={this.props.data} tourEnabled={this.props.tourEnabled.bind(this)}/>
         </div>
-
-        <div>
-          <h2>Тур</h2>
-          <nav>
-            <a href="#"> prev </a>
-            <ul>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">4</a></li>
-              <li><a href="#">5</a></li>
-              <li><a href="#">6</a></li>
-            </ul>
-            <a href="#"> next </a>
-          </nav>
-        </div>
-        
-
+          <div key={this.enabledClass()} className={`tour-section--content tour-section--content__right ${this.enabledClass() !== '' ? 'tour-section--content__active' : '' }`}>
+            {this.renderItem()} 
+          </div>
       </div>
     )
+  }
+
+  enabledClass() {
+    const enable = this.props.data.find( item => item.isEnabled === true );
+    if (enable) {
+      return enable.enableClass
+    } else { return ''}
+  }
+
+  renderItem() {
+    const item = this.props.data.find( item => item.isEnabled === true );
+      return  item ? <SubItem data={item} tourSubEnabled={this.props.tourSubEnabled.bind(this)}/> : ''
   }
 }
 

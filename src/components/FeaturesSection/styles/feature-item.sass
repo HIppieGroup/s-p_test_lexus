@@ -1,0 +1,84 @@
+.feature-item
+  flex: 1 1 10rem
+  &--btn
+    position: relative
+    display: block
+    margin: auto
+    margin-bottom: 2.5rem
+    width: 7.8rem
+    height: 7.8rem
+    border-radius: 50%
+    background-image: url("../../../image/features/features-split.png")
+    background-repeat: no-repeat
+    text-decoration: none
+    background-size: 1400% 100%
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%) scale(.8,.8) 
+      width: 10rem
+      height: 10rem
+      background-image: url("../../../image/features/feature-over.png")
+      background-repeat: no-repeat
+      background-size: contain
+
+      opacity: 0
+      transition: all ease-out .3s
+
+    &:hover,
+    &__active
+      &:after
+        transform: translate(-50%,-50%) scale(1,1) 
+        opacity: 1
+
+
+  &--description
+    position: relative
+    top: 0
+    transform: translateY(-90%) scaleY(0) 
+    display: block
+    width: 7rem
+    margin: auto
+    font-size: 1.1rem
+    line-height: 2rem
+    color: #696969
+    transition: all ease-out .4s
+    transition-delay: .2s
+    &:after
+      content: ''
+      position: absolute
+      bottom: -3rem
+      left: 50%
+      transform: translateX(-50%)
+      background-image: url("../../../image/features/features-sec.png")
+      background-repeat: no-repeat
+      width: 2rem
+      height: 2.5rem
+
+  &:hover
+    .feature-item--description
+      transform: translateY(0) scaleY(1) 
+
+  &__img-1
+    background-position: 0 0
+  &__img-2
+    background-position: 11% 0
+  &__img-3
+    background-position: 22.3% 0
+  &__img-4
+    background-position: 33.4% 0
+  &__img-5
+    background-position: 44.5% 0
+  &__img-6
+    background-position: 55.6% 0
+  &__img-7
+    background-position: 66.7% 0
+  &__img-8
+    background-position: 77.8% 0
+  &__img-9
+    background-position: 88.9% 0
+  &__img-10
+    background-position: 100% 0

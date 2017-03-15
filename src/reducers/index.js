@@ -1,7 +1,13 @@
 import { combineReducers } from 'redux';
-import newReducer from './newReducer';
+import tourReducer from './tourReducer/tourReducer';
+import featuresReducer from './featuresReducer/featuresReducer';
+import colorReducer from './colorReducer/colorReducer';
 
+import colorCarReducer from './colorReducer/colorCarReducer';
 
 export default combineReducers({
-  newReducer,
+  tourReducer,
+  featuresReducer,
+  colorReducer,
+  colorCarReducer
 });

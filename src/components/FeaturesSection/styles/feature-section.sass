@@ -1,0 +1,48 @@
+.feature-section
+  text-align: center
+  position: relative
+  box-sizing: border-box 
+  margin: 33rem auto
+  @media only screen and (max-width:1100px)
+    margin: 20rem auto
+  @media only screen and (max-width:900px)
+    margin: 30rem auto
+    margin-bottom: 10rem
+  @media only screen and (max-width:795px)
+    margin: 50rem auto
+    margin-bottom: 55rem
+
+
+  &--header
+    margin: 0
+    font-family: "FuturaLight", Arial
+    font-size: 10rem
+    font-weight: 200
+    letter-spacing: -.05em;
+    text-transform: uppercase
+    color: #88827c
+  &--description
+    position: relative
+    font-size: 1.1rem
+    color: #696969
+    margin-top: -7rem 
+    &:after
+      content: ''
+      position: absolute
+      top: 5rem
+      left: 50%
+      transform: translateX(-50%)
+      background-image: url("../../../image/features/features-sec.png")
+      background-repeat: no-repeat
+      width: 2rem
+      height: 2.5rem
+
+  &--list
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: flex-start
+    list-style: none
+    padding: 0
+    transition: transform .5s ease-out
+    transition-delay: .3s

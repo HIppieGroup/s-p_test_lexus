@@ -1,0 +1,170 @@
+.tour-section
+  max-width: 120rem
+  overflow: hidden
+  margin: 33rem auto
+  margin-bottom: 44rem
+  height: 64rem
+  font-family: Arial, sans-serif
+  background-image: url("../../../image/tour/tour-img-1.jpg")
+  background-repeat: no-repeat
+  background-color: #000
+  box-shadow: 0 0 5rem #000
+  background-position: 0 0
+  background-color: #ece3d4
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: stretch
+  padding-top: 0
+  padding-bottom: 0
+  @media only screen and (max-width:1100px)
+    margin: 0rem auto
+    margin-bottom: 55rem
+    max-width: 100%
+    background-size: cover
+
+  @media only screen and (max-width:795px)
+    margin: 0rem auto
+    margin-bottom: 40rem
+
+  @media only screen and (max-width:795px)
+    margin: 40rem auto
+    margin-bottom: 30rem
+  
+  &--content
+    &__left
+      flex: 2 1 79rem
+      vertical-align: bottom
+      align-self: flex-end
+      padding-bottom: 7rem
+      padding-left: 6rem
+      box-sizing: border-box
+    &__right
+      flex: 1 2 41rem
+      background-color: #ece3d4
+      padding: 18rem 10rem 0 8rem
+      transform: translateX(100%)
+      box-sizing: border-box
+      // transition: transform ease-out .4s
+    &__active
+      transform: translateX(0)
+      animation: rightSec .41s ease-out
+      
+  &--header
+    margin: 0
+    font-family: "FuturaLight", Arial
+    font-size: 10rem
+    line-height: 10rem
+    font-weight: 200
+    letter-spacing: -.05em
+    text-transform: uppercase
+    color: #f2e4cf
+
+  &__enable-1
+    background-image: url("../../../image/tour/tour-img-1.jpg")
+    animation: imgSec1 0s ease-out .39s
+    animation-fill-mode: forwards
+    @media only screen and (max-width:1100px)
+      background-size: contain
+
+  &__enable-2
+    background-position: 0px 0px
+    background-image: url("../../../image/tour/tour-img-2.jpg")
+    animation: imgSec2 .39s ease-in 
+    animation-fill-mode: forwards
+    @media only screen and (max-width:1100px)
+      background-size: contain
+
+  &__enable-3
+    background-position: 0px 0px
+    background-image: url("../../../image/tour/tour-img-3.jpg")
+    animation: imgSec3 .39s ease-in
+    animation-fill-mode: forwards
+    @media only screen and (max-width:1100px)
+      background-size: contain
+
+  &__enable-4
+    background-image: url("../../../image/tour/tour-img-4.jpg")
+    animation: imgSec4 .39s ease-in
+    animation-fill-mode: forwards
+    @media only screen and (max-width:1100px)
+      background-size: contain
+  &__enable-5
+    background-image: url("../../../image/tour/tour-img-5.jpg")
+    animation: imgSec5 .0s ease-in .39s
+    animation-fill-mode: forwards
+    @media only screen and (max-width:1100px)
+      background-size: contain
+  &__enable-6
+    background-position: -200px 0px
+    background-image: url("../../../image/tour/tour-img-6.jpg")
+    animation: imgSec6 .39s ease-in
+    animation-fill-mode: forwards
+    @media only screen and (max-width:1100px)
+      background-size: contain
+
+
+@keyframes imgSec1
+  0%
+    background-image: url("../../../image/tour/tour-img-1.jpg")
+  100%
+    background-image: url("../../../image/tour/tour-img-over-1.jpg")
+
+@keyframes imgSec2
+  0%
+    background-position: 0px 0px
+  99.9%
+    background-position: -8.6rem 0px
+    background-image: url("../../../image/tour/tour-img-2.jpg")
+  100%
+    
+    background-position: 0px 0px
+    background-image: url("../../../image/tour/tour-img-over-2.jpg")
+
+@keyframes imgSec3
+  0%
+    background-position: 0px 0px
+  99.9%
+    background-position: -16.6rem 0px
+    background-image: url("../../../image/tour/tour-img-3.jpg")
+  100%
+    background-position: 0px 0px
+    background-image: url("../../../image/tour/tour-img-over-3.jpg")
+
+@keyframes imgSec4
+  0%
+    background-position: 0px 0px
+  99.9%
+    background-position: -43.5rem 0px
+    background-image: url("../../../image/tour/tour-img-4.jpg")
+  100%
+    
+    background-position: 0px 0px
+    background-image: url("../../../image/tour/tour-img-over-4.jpg")
+
+@keyframes imgSec5
+  0%
+    background-image: url("../../../image/tour/tour-img-5.jpg")
+  100%
+    
+    background-image: url("../../../image/tour/tour-img-over-5.jpg")
+
+@keyframes imgSec6
+  0%
+
+    background-position: -200px 0px
+  99.9%
+    background-image: url("../../../image/tour/tour-img-6.jpg")
+    background-position: -200px 0px
+  100%
+    background-position: 0px 0px
+    background-image: url("../../../image/tour/tour-img-over-6.jpg")
+
+
+
+@keyframes rightSec
+  0%
+    transform: translateX(100%)
+  100%
+    transform: translateX(0)
+

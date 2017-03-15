@@ -1,0 +1,66 @@
+.tour-sub
+  opacity: 0
+  animation: sub-item-anim .6s ease-out
+  animation-delay: .4s
+  animation-fill-mode: forwards
+
+  &--item
+    opacity: 0
+    animation: sub-item-anim 1s ease-out
+    animation-fill-mode: forwards
+
+  &--header
+    margin: 0
+    font-size: 1.1rem
+    line-height: 2.2rem
+    font-style: italic
+    color: #171717
+
+  &--description
+    margin-top: 0
+    margin-bottom: 1.4rem
+    font-size: 1.1rem
+    line-height: 2.2rem
+    color: #afafaf
+    
+
+.tour-sub-nav
+  transition: all ease-out 1s
+  display: flex
+  list-style: none
+  padding: 0
+  &--item
+    border: 1px solid #ede0c6
+  &--btn
+    display: block
+    position: relative
+    width: 2.7rem
+    height: 2.7rem
+    text-decoration: none
+    color: #707877
+    &:after
+      content: '+'
+      font-size: 1.3rem
+      font-weight: bold
+      position: absolute
+      display: block
+      height: 1.3rem
+      width: 1.3rem
+      padding-bottom: .1rem
+      text-align: center
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      transition: all ease-out .4s
+    &:hover,
+    &__active
+      color: #fff
+      &:after
+        background-color: #c8bbb1
+
+
+@keyframes sub-item-anim
+  0% 
+    opacity: 0
+  100%
+    opacity: 1

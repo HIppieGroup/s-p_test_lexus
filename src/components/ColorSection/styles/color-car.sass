@@ -1,0 +1,91 @@
+.color-car
+  position: relative
+  z-index: 2
+  width: 92.5rem
+  height: 27rem
+  margin-top: 2rem
+  background-repeat: no-repeat
+  background-size: contain
+  transition: background .5s ease-out, transform 8s ease-out 
+
+  &__right
+    transform: translateX(30%)
+    &:after
+      transform: rotateZ(180deg)
+    &:before
+      transform: rotateZ(180deg)
+
+  &__left
+    transform: translateX(-30%)
+    &:after
+      transform: rotateZ(-180deg)
+    &:before
+      transform: rotateZ(-180deg)
+  
+  &:after
+    content: ''
+    position: absolute
+    z-index: -10
+    display: block
+    width: 10rem
+    height: 10rem
+    bottom: 1.2rem
+    left: 72.7%
+    background-image: url("../../../image/car/car-weel.png")
+    background-size: contain
+    background-repeat: no-repeat
+    transition: transform 8s ease-out
+
+  &:before
+    content: ''
+    position: absolute
+    z-index: 0
+    display: block
+    width: 10rem
+    height: 10rem
+    bottom: 1.4rem
+    left: 14.8%
+    background-image: url("../../../image/car/car-weel.png")
+    background-size: contain
+    background-repeat: no-repeat
+    transition: transform 8s ease-out
+
+  &--shadow
+    width: 100%
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      z-index: -10
+      display: block
+      width: 104rem
+      height: 27rem
+      bottom: -40rem
+      left: 50.2%
+      transform: translateX(-50%)
+      background-image: url("../../../image/car/shadow-car.png")
+      background-size: contain
+      background-repeat: no-repeat
+      transition: all 8s ease-out
+    
+
+  &__color-1
+    background-image: url("../../../image/car/car_color_0.png")
+  &__color-2
+    background-image: url("../../../image/car/car_color_1.png")
+  &__color-3
+    background-image: url("../../../image/car/car_color_2.png")
+  &__color-4
+    background-image: url("../../../image/car/car_color_3.png")
+  &__color-5
+    background-image: url("../../../image/car/car_color_4.png")
+  &__color-6
+    background-image: url("../../../image/car/car_color_5.png")
+  &__color-7
+    background-image: url("../../../image/car/car_color_6.png")
+  &__color-8
+    background-image: url("../../../image/car/car_color_7.png")
+  &__color-9
+    background-image: url("../../../image/car/car_color_8.png")
+  &__color-10
+    background-image: url("../../../image/car/car_color_9.png")

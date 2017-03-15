@@ -1,0 +1,62 @@
+.navigation-mnu
+  position: fixed
+  z-index: 10
+  top: 20%
+  @media only screen and (max-width:600px)
+    top: 10%
+  left: 50%
+  transform: translateX(-50%)
+  width: 116rem
+  max-width: 116rem
+  &:hover
+    .navigation-mnu--bottom
+      transform: translateY(0) scale(1,1) 
+    .navigation-mnu--content
+      background-color: rgba(29,31,38,1)
+    .navigation-mnu--header
+      color: rgba(255,255,255,1)   
+  
+
+  &--content
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding: 1.3rem 2rem 1rem 2rem
+    background-color: rgba(29,31,38,.8)
+    border-bottom: 1px solid #33393f
+    transition: all ease-out .4s 
+
+  &--header
+    position: relative
+    font-size: 3.1rem
+    color: rgba(255,255,255,.8)
+    letter-spacing: -0.03rem
+    text-transform: uppercase
+    font-family: "FuturicaLtThin", Arial
+    transition: all ease-out .5s 
+    &:after
+      content: '∨'
+      position: absolute
+      display: block
+      top: 40%
+      right: -20%
+      color: #786a55
+      transform: translateY(-50%)
+
+  &--logo
+    display: block
+    height: 3.4rem
+    width: 13.6rem
+    cursor: pointer
+    background-size: 13.6rem 3.4rem
+    background-image: url("../../../image/Lexus.svg")
+    background-repeat: no-repeat
+
+  &--bottom
+    position: absolute
+    width: 100%
+    transform: translateY(-50%) scale(1,0) 
+    background-color: rgba(29,31,38,1)
+    transition: transform ease-out .3s 0s
+    

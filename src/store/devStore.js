@@ -7,9 +7,8 @@ const persistedState = loadState();
 export default function configureStore() {
   return createStore(
     reducers, 
-    persistedState,
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     );
 }
 
-
+// persistedState,
